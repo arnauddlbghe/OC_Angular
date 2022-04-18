@@ -7,34 +7,34 @@ import { FaceSnap } from './models/face-snap.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-    mySnap!:FaceSnap;
-    myOtherSnap!:FaceSnap;
-    myLastSnap!:FaceSnap;
+    faceSnaps!:FaceSnap[];
 
     ngOnInit(): void {
-        this.mySnap = new FaceSnap(
-            'Archibald', 
-            'Mon meilleur ami depuis tout petit!', 
-            'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
-            new Date(),
-            0,
-            false,
-        );
-        this.myOtherSnap = new FaceSnap(
-            'Pâques', 
-            'Joyeuse Pâque!', 
-            'https://cdn.pixabay.com/photo/2022/04/02/12/32/easter-tree-7106933_960_720.jpg',
-            new Date(),
-            0,
-            false,
-        );
-        this.myLastSnap = new FaceSnap(
-            'Maison', 
-            'La nature!', 
-            'https://cdn.pixabay.com/photo/2020/01/09/03/43/mansion-4751778_960_720.jpg',
-            new Date(),
-            0,
-            false,
-        );
+        this.faceSnaps = [
+        {
+            title: 'Archibald', 
+            description: 'Mon meilleur ami depuis tout petit!', 
+            imageUrl: 'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
+            createdDate: new Date(),
+            snaps: 0,
+            isSnapped: false,
+            location: 'France'
+        },
+        {
+            title: 'Archibald2', 
+            description: 'Mon meilleur ami depuis tout petit!', 
+            imageUrl: 'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
+            createdDate: new Date(),
+            snaps: 0,
+            isSnapped: false,
+        },
+        {
+            title: 'Archibald3', 
+            description: 'Mon meilleur ami depuis tout petit!', 
+            imageUrl: 'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
+            createdDate: new Date(),
+            snaps: 0,
+            isSnapped: false,
+        }]
     }
 }

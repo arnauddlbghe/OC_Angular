@@ -15,16 +15,7 @@ export class FaceSnapComponent implements OnInit {
   }
 
   onSnap(): void {
-    if (this.faceSnap.isSnapped) {
-      this.faceSnap.snaps--;
-      this.faceSnap.isSnapped = false;
-      this.buttonText = 'Oh Snap!';
-    }
-    else {
-      this.faceSnap.snaps++;
-      this.faceSnap.isSnapped = true;
-      this.buttonText = 'Oops, un Snap!';
-    }
+    this.faceSnap.snaps++;
   }
 
 }
